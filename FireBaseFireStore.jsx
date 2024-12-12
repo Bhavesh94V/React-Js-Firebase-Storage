@@ -49,14 +49,16 @@ export default function FireBaseFireStore() {
             <button onClick={AddData}>Add Data</button>
             <button onClick={GetData}>Get Data</button>
             <ul style={{ listStyle: "none" }}>
-                {state.map((user) => (
-                    <li key={user.id}>
-                        <p>First Name: {user.first}</p>
-                        <p>Last Name: {user.last}</p>
-                        <p>Born: {user.born}</p>
-                        <button onClick={() => DeleteData(user.id)}>Delete</button>
-                    </li>
-                ))}
+                {
+                    state.map((user) => (
+                        <li key={user.id}>
+                            <p>First Name: {user.first}</p>
+                            <p>Last Name: {user.last}</p>
+                            <p>Born: {user.born}</p>
+                            <button onClick={() => DeleteData(user.id)}>Delete</button>
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     );
